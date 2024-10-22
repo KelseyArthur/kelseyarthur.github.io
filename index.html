@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotly Graph Example</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Plotly Graph Example</h1>
+    <div id="plotly-graph" style="width:600px;height:400px;"></div>
+
+    <script>
+        // Data for the plot
+        var trace1 = {
+            x: [1, 2, 3, 4, 5],
+            y: [10, 15, 13, 17, 16],
+            mode: 'lines',
+            type: 'scatter'
+        };
+
+        var data = [trace1];
+
+        // Layout for the plot
+        var layout = {
+            title: 'Simple Line Graph',
+            xaxis: {
+                title: 'X Axis'
+            },
+            yaxis: {
+                title: 'Y Axis'
+            }
+        };
+
+        // Render the plot in the div with id 'plotly-graph'
+        Plotly.newPlot('plotly-graph', data, layout);
+    </script>
+</body>
+</html>
